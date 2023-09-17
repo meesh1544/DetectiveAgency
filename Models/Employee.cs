@@ -7,12 +7,12 @@ namespace DetectiveAgency.Models
         [Required]
         public int Id { get; set; }
         [StringLength(30)]
-        public string Name { get; set; }
+        public string? Name { get; set; }
         [Required]
         [Range(10,75,ErrorMessage ="Hours must between 10 and 75.")] 
         public double Hours { get; set; }
         [Required]
-        [Range(15,75, ErrorMessage ="Rate should be between $15 and $75.")]
+        [Range(15,75,ErrorMessage ="Rate should be between $15 and $75.")]
         public double Rate { get; set; }
         public double CalcSalary()
         {
